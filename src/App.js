@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Widget, addResponseMessage, addLinkSnippet, addUserMessage, renderCustomComponent } from 'react-chat-widget';
+import { Widget, addResponseMessage, addLinkSnippet, addUserMessage, renderCustomComponent, toggleWidget } from 'react-chat-widget';
 
 import 'react-chat-widget/lib/styles.css';
 import Reply from './components/Reply/Reply'
@@ -10,6 +10,7 @@ import logo from './profile-bot.jpg';
 
 class App extends Component {
   componentDidMount() {
+    toggleWidget()
     addResponseMessage("Hey! How may I help you?");
   }
 
@@ -20,7 +21,7 @@ class App extends Component {
       newMessage: newMessage,
     }
 
-    fetch('http://18.234.161.91:8086/chat/', {
+    fetch('http://54.172.155.76:8086/chat/', {
       method: 'post',
       headers: {
         'Content-type': 'application/json'
