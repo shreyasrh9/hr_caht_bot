@@ -21,7 +21,7 @@ class App extends Component {
       newMessage: newMessage,
     }
 
-    fetch('http://54.172.155.76:8086/chat/', {
+    fetch('http://localhost:8086/chat/', {
       method: 'post',
       headers: {
         'Content-type': 'application/json'
