@@ -21,7 +21,7 @@ class App extends Component {
       newMessage: newMessage,
     }
 
-    fetch('http://demo2.foundationai.com:8086/chat/', {
+    fetch('http://demo.foundationai.com:8086/chat/', {
       method: 'post',
       headers: {
         'Content-type': 'application/json'
